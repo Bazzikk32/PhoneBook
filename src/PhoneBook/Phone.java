@@ -5,8 +5,9 @@ import java.util.*;
 public class Phone {
     public Map<String,ArrayList<Integer>> map = new HashMap<>();
     List<Integer> listOfNumber;
+    Contact contact1= new Contact();
     public void addNumbers(){
-        Contact contact1= new Contact();
+        //Contact contact1= new Contact();
         contact1.setName();
         contact1.setPhoneNumber();
         //System.out.println(contact1.getName() + contact1.getPhoneNumber());
@@ -30,6 +31,19 @@ public class Phone {
 
         });
         System.out.println(mapPhone);
+    }
+    public Boolean stopProgram (){
+        Boolean stop;
+        //String answer = "STOP";
+        if (contact1.getName().equals("STOP")){
+            stop = false;
+        } else {
+            stop = true;
+        }
+        System.out.println(contact1.getName());
+        System.out.println(stop);
+
+        return stop;
     }
 
 
