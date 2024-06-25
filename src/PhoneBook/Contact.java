@@ -19,6 +19,7 @@ public class Contact {
         return phoneNumber;
     }
 
+    /** логика получения имени*/
     public void setName() {
         System.out.println("Введите имя:");
         Scanner inName = new Scanner(System.in);
@@ -30,6 +31,7 @@ public class Contact {
     }
 
 
+    /** логика получения номера*/
     public void setPhoneNumber() {
         System.out.println("Введите номер:");
         Scanner inNumber = new Scanner(System.in);

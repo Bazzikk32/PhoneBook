@@ -6,6 +6,11 @@ public class Phone {
     public Map<String,ArrayList<Integer>> map = new HashMap<>();
     List<Integer> listOfNumber;
     Contact contact1= new Contact();
+    /**Логика добавления имени и номера в MAP, так же идет проверка на имя STOP,
+     * если вводится данное слово то программа прекращает работу НЕ записывая его в MAP
+     * продолжение логики запись значений в MAP, если ИМЯ уже было, то логика находит его
+     * и кладет в ArrayList другой номер, если данного пользователя не было, то он вносится в MAP
+     * вместе с нмоером*/
     public void addNumbers(){
         //Contact contact1= new Contact();
         contact1.setName();
@@ -27,7 +32,9 @@ public class Phone {
 
 
 }
-    public void printMap() {
+/**Данный метон необходим для печати уже отсортированной с помощью компаратора MAP, важно обернуть
+ * MAP в Array List Integer*/
+public void printMap() {
         List<Map.Entry<String, ArrayList<Integer>>> mapPhone = new ArrayList<>(map.entrySet());
         Collections.sort(mapPhone, new Comparator<Map.Entry <String, ArrayList<Integer>>>() {
             @Override
@@ -39,6 +46,8 @@ public class Phone {
         System.out.println(mapPhone);
     }
 
+
+    /**Данный метод нужен для выполнения цикла в классе MAIN, для остановки программы*/
     public boolean stopProgram() {
         Boolean stop;
         //String answer = "STOP";
