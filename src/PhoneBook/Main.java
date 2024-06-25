@@ -9,8 +9,8 @@ public class Main {
         do{
 
         phone1.addNumbers();
-        phone1.stopProgram();
         phone1.printMap();
+        phone1.stopProgram();
 
         } while (phone1.stopProgram()==true);
 
